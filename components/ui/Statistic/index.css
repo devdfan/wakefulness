@@ -1,0 +1,15 @@
+.card-statistic {
+  position: relative;
+}
+
+.card-statistic__chart {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 200px;
+  height: 100%;
+  width: 100%;
+  margin-inline: 10px;
+}
