@@ -14,6 +14,7 @@ import {
   IonRow,
 } from '@ionic/react';
 import { rocketOutline, optionsOutline, expandOutline } from 'ionicons/icons';
+import { ThemeSwitcher } from 'components/ui/ThemeSwitcher';
 import { contacts } from 'mock';
 
 import { DroppableItems } from './DroppableItems';
@@ -92,6 +93,7 @@ const TeamManager = () => {
             <IonButton>
               <IonIcon icon={rocketOutline} />
             </IonButton>
+            <ThemeSwitcher />
           </IonButtons>
         </IonToolbar>
       </IonHeader>

@@ -1,6 +1,6 @@
 module.exports = {
   purge: [],
-  darkMode: 'media',
+  darkMode: 'class',
   theme: {
     colors: {
       'primary': '#5EC288',

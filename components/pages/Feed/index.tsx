@@ -16,7 +16,8 @@ import {
   IonGrid,
   IonRow,
 } from '@ionic/react';
-import { notificationsOutline, layersOutline } from 'ionicons/icons';
+import { notificationsOutline } from 'ionicons/icons';
+import { ThemeSwitcher } from 'components/ui/ThemeSwitcher';
 
 import Notifications from '../Notifications/Notifications';
 import Card from '../../ui/Card';
@@ -82,6 +83,7 @@ const Feed = () => {
               <IonButton onClick={() => setShowNotifications(true)}>
                 <IonIcon icon={notificationsOutline} />
               </IonButton>
+              <ThemeSwitcher />
             </IonButtons>
           </IonToolbar>
         </IonHeader>

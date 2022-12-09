@@ -9,7 +9,9 @@ import {
   IonList,
   IonToggle,
   IonLabel,
+  IonButtons,
 } from '@ionic/react';
+import { ThemeSwitcher } from 'components/ui/ThemeSwitcher';
 
 import Store from '../../../store';
 import * as selectors from '../../../store/selectors';
@@ -23,6 +25,9 @@ const Settings = () => {
       <IonHeader>
         <IonToolbar>
           <IonTitle>Settings</IonTitle>
+          <IonButtons slot="end">
+            <ThemeSwitcher />
+          </IonButtons>
         </IonToolbar>
       </IonHeader>
       <IonContent>
