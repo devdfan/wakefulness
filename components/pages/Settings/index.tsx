@@ -11,9 +11,9 @@ import {
   IonLabel,
 } from '@ionic/react';
 
-import Store from '../../store';
-import * as selectors from '../../store/selectors';
-import { setSettings } from '../../store/actions';
+import Store from '../../../store';
+import * as selectors from '../../../store/selectors';
+import { setSettings } from '../../../store/actions';
 
 const Settings = () => {
   const settings = Store.useState(selectors.getSettings);

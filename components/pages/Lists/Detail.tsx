@@ -14,9 +14,9 @@ import {
 } from '@ionic/react';
 import { useParams } from 'react-router-dom';
 
-import Store from '../../store';
-import * as actions from '../../store/actions';
-import * as selectors from '../../store/selectors';
+import Store from 'store';
+import * as actions from 'store/actions';
+import * as selectors from 'store/selectors';
 
 const ListItems = ({ list }) => {
   return (
@@ -35,7 +35,7 @@ const ListItemEntry = ({ list, item }) => (
   </IonItem>
 );
 
-const ListDetail = () => {
+const Detail = () => {
   const lists = Store.useState(selectors.getLists);
   const params = useParams<{ listId: string }>();
   const { listId } = params;
@@ -58,4 +58,4 @@ const ListDetail = () => {
   );
 };
 
-export default ListDetail;
+export default Detail;

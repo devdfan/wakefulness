@@ -1,12 +1,12 @@
 import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
 import { IonRouterOutlet, IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel } from '@ionic/react';
-import { cogOutline, flashOutline, list, cubeOutline } from 'ionicons/icons';
+import { cogOutline, flashOutline, personAddOutline } from 'ionicons/icons';
 
 import Home from './Feed';
 import Lists from './Lists';
-import Builder from './Builder';
-import ListDetail from './ListDetail';
+import TeamManager from './TeamManager';
+import ListDetail from './Lists/Detail';
 import Settings from './Settings';
 
 const Tabs = () => {
@@ -17,7 +17,7 @@ const Tabs = () => {
         <Route path="/tabs/lists" render={() => <Lists />} exact={true} />
         <Route path="/tabs/lists/:listId" render={() => <ListDetail />} exact={true} />
         <Route path="/tabs/settings" render={() => <Settings />} exact={true} />
-        <Route path="/tabs/builder" render={() => <Builder />} exact={true} />
+        <Route path="/tabs/manage-team" render={() => <TeamManager />} exact={true} />
         <Route path="/tabs" render={() => <Redirect to="/tabs/feed" />} exact={true} />
       </IonRouterOutlet>
       <IonTabBar slot="bottom">
@@ -25,9 +25,9 @@ const Tabs = () => {
           <IonIcon icon={flashOutline} />
           <IonLabel>Feed</IonLabel>
         </IonTabButton>
-        <IonTabButton tab="tab2" href="/tabs/builder">
-          <IonIcon icon={cubeOutline} />
-          <IonLabel>Builder</IonLabel>
+        <IonTabButton tab="tab2" href="/tabs/manage-team">
+          <IonIcon icon={personAddOutline} />
+          <IonLabel>Team</IonLabel>
         </IonTabButton>
         {/* <IonTabButton tab="tab2" href="/tabs/lists">
           <IonIcon icon={list} />

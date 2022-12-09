@@ -1,10 +1,8 @@
 import React from 'react';
 import {
-  IonCard,
-  IonCardHeader,
-  IonCardSubtitle,
-  IonCardTitle,
-  IonCardContent,
+  IonItem,
+  IonAvatar,
+  IonLabel,
 } from '@ionic/react';
 import { Draggable } from 'react-beautiful-dnd';
 import cn from 'classnames';
@@ -22,13 +20,18 @@ export const DraggableItem: React.FC<Props> = ({ item, index }) => (
         {...provided.draggableProps}
         {...provided.dragHandleProps}
       >
-        <IonCard>
-          <IonCardHeader>
-            <IonCardTitle>{item.name}</IonCardTitle>
-            <IonCardSubtitle>{item.email}</IonCardSubtitle>
-          </IonCardHeader>
-          <IonCardContent>{item.phone}</IonCardContent>
-        </IonCard>
+        <IonItem>
+          <IonAvatar slot="start">
+            <img
+              alt="Silhouette of a person's head"
+              src="https://ionicframework.com/docs/img/demos/avatar.svg"
+            />
+          </IonAvatar>
+          <IonLabel>
+            {item.name}
+            <p>{item.email}</p>
+          </IonLabel>
+        </IonItem>
       </div>
     )}
   </Draggable>

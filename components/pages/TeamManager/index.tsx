@@ -14,7 +14,7 @@ import {
   IonRow,
 } from '@ionic/react';
 import { rocketOutline, optionsOutline, expandOutline } from 'ionicons/icons';
-import { DroppableItems } from './components/DroppableItems/DroppableItems';
+import { DroppableItems } from './DroppableItems';
 
 export const contacts = [
   {
@@ -90,16 +90,12 @@ export const contacts = [
 ];
 
 export const lists = {
-  family: {
-    name: 'Familiar person',
+  users: {
+    name: 'All users',
     items: contacts,
   },
-  friends: {
-    name: 'Companion',
-    items: [],
-  },
-  bestFriends: {
-    name: 'Best friend',
+  team: {
+    name: 'Team',
     items: [],
   },
 };
@@ -119,7 +115,7 @@ export interface ObjectContacts<ObjectList> {
   [id: string]: ObjectList;
 }
 
-const Lists = () => {
+const TeamManager = () => {
   const [columns, setColumns] = React.useState<ObjectContacts<ObjectList>>(lists);
 
   const onDragEnd = (
@@ -203,4 +199,4 @@ const Lists = () => {
   );
 };
 
-export default Lists;
+export default TeamManager;

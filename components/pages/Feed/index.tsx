@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+//import { LineChart, Line } from 'recharts';
 import {
   IonPage,
   IonHeader,
@@ -17,11 +18,11 @@ import {
 } from '@ionic/react';
 import { notificationsOutline, layersOutline } from 'ionicons/icons';
 
-import Notifications from './Notifications';
-import Card from '../ui/Card';
-import Statistic from '../ui/Statistic';
-import Store from '../../store';
-import { getHomeItems } from '../../store/selectors';
+import Notifications from '../Notifications/Notifications';
+import Card from '../../ui/Card';
+import Statistic from '../../ui/Statistic';
+import Store from '../../../store';
+import { getHomeItems } from '../../../store/selectors';
 
 const FeedCard = ({ title, type, text, author, authorAvatar, image }) => (
   <Card className="mx-3 cursor-pointer transition transform hover:-translate-y-1 hover:scale-105 motion-reduce:transition-none motion-reduce:hover:transform-none">
@@ -96,6 +97,10 @@ const Feed = () => {
             open={showNotifications}
             onDidDismiss={() => setShowNotifications(false)}
           />
+
+          {/* <LineChart width={400} height={400} data={[{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, {name: 'Page B', uv: 200, pv: 1400, amt: 1400}, {name: 'Page B', uv: 300, pv: 400, amt: 400}]}>
+            <Line type="monotone" dataKey="uv" stroke="#8884d8" />
+          </LineChart> */}
 
           <IonGrid fixed>
             <IonRow>
