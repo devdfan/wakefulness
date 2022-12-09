@@ -1,7 +1,9 @@
 import React from 'react';
 import { Droppable } from 'react-beautiful-dnd';
-import { IonCol, IonInput, IonRow } from '@ionic/react';
+import { IonCol, IonIcon, IonInput, IonItem, IonLabel, IonRow } from '@ionic/react';
+import { searchOutline } from 'ionicons/icons';
 import cn from 'classnames';
+
 import { DraggableItem } from './DraggableItem';
 
 interface Props {

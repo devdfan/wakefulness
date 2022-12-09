@@ -60,3 +60,56 @@ export const lists = [
   { name: 'Work', id: 'work', items: [{ name: 'TPS Report' }, { name: 'Set up email' }] },
   { name: 'Reminders', id: 'reminders' },
 ];
+
+export const contacts = [
+  {
+    id: '1',
+    name: 'Allen Raymond',
+    email: 'nulla.ante@vestibul.co.uk',
+  },
+  {
+    id: '2',
+    name: 'Chaim Lewis',
+    email: 'dui.in@egetlacus.ca',
+  },
+  {
+    id: '3',
+    name: 'Kennedy Lane',
+    email: 'mattis.Cras@nonenimMauris.net',
+  },
+  {
+    id: '4',
+    name: 'Wylie Pope',
+    email: 'est@utquamvel.net',
+  },
+  {
+    id: '5',
+    name: 'Cyrus Jackson',
+    email: 'nibh@semsempererat.com',
+  },
+  {
+    id: '6',
+    name: 'Abbot Franks',
+    email: 'scelerisque@magnis.org',
+  },
+  {
+    id: '7',
+    name: 'Reuben Henry',
+    email: 'pharetra.ut@dictum.co.uk',
+  },
+  {
+    id: '8',
+    name: 'Simon Morton',
+    email: 'dui.Fusce.diam@Donec.com',
+  },
+  {
+    id: '9',
+    name: 'Alex Raypinos',
+    email: 'raypino@vestibul.co.uk',
+  },
+  {
+    id: '10',
+    name: 'Alec Howard',
+    email: 'Donec.elementum@scelari.net',
+  },
+];
